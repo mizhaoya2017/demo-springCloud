@@ -1,0 +1,14 @@
+server:
+  port: 8001 # \u670D\u52A1\u7AEF\u53E3
+
+eureka:
+  instance:
+    hostname: localhost # \u8BBE\u7F6E\u4E3B\u673A\u540D
+  client:
+    registerWithEureka: false # \u662F\u5426\u5411 Eureka \u6CE8\u518C\u670D\u52A1\u3002\u8BE5\u5E94\u7528\u4E3A\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\uFF0C\u4E0D\u9700\u8981\u81EA\u6CE8\u518C\uFF0C\u8BBE\u7F6E\u4E3A false
+    fetchRegistry: false # \u662F\u5426\u68C0\u7D22\u670D\u52A1\u3002\u8BE5\u5E94\u7528\u4E3A\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\uFF0C\u804C\u8D23\u4E3A\u6CE8\u518C\u548C\u53D1\u73B0\u670D\u52A1\uFF0C\u65E0\u9700\u68C0\u7D22\u670D\u52A1\uFF0C\u8BBE\u7F6E\u4E3A false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # \u6CE8\u518C\u4E2D\u5FC3url
+spring:
+  application:
+    name: eurka-server  #\u670D\u52A1\u540D\u79F0
